@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Webpack App</title>
+        <style>
+            :root {
+                --start-color: rgb(26, 26, 44);
+                --mid-color: rgb(24, 43, 24);
+            }
+
+            @keyframes colorAnimation {
+                0% { background-color: var(--start-color); } /* Specify the initial background color */
+                50% { background-color: var(--mid-color); } /* Specify the intermediate background color */
+                100% { background-color: var(--start-color); } /* Specify the final background color */
+            }
+
+            * {
+                color: rgb(224, 108, 108);
+            }
+
+            body {
+                animation: colorAnimation 100s ease infinite; /* Apply the animation */
+            }
+        </style>
+    </head>
+    <body>
+    </body>
+    <div id="root"></div>
+    
+    <script src="/dist/main.js"></script>
+</html>
