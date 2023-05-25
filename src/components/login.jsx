@@ -2,7 +2,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import * as C from '../../backend/src/constants'
 
-import { useUserContext, useWebSocketContext } from './state';
+import { useUserContext } from './state';
+
+import { useWebSocketContext } from './websocket';
 
 const Login = (props) => {
     const [name, setName] = useState('');

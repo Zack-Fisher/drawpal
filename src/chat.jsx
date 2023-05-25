@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import UserList from "./components/user_list";
-import { useMessageContext, useUserContext, useWebSocketContext } from "./components/state";
+import { useMessageContext, useUserContext } from "./components/state";
+import { useWebSocketContext } from "./components/websocket";
 
 import * as C from "../backend/src/constants";
+import Background from "./components/background";
 
 const ChatComponent = (props) => {
     // the state the chat has access to
@@ -23,22 +25,25 @@ const ChatComponent = (props) => {
 
     return (
         <div>
-            <p>chat</p>
+            <Background>
+                <p>chat</p>
 
-            <input
-                type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-            />
-            <button onClick={onSendMessage}>
-                Send Message
-            </button>
+                <input
+                    type="text"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                />
 
-            <div>
-                {messages.map((message, index) =>
-                    <p key={index}>{message}</p>
-                )}
-            </div>
+                <button onClick={onSendMessage}>
+                    Send Message
+                </button>
+
+                <div>
+                    {messages.map((message, index) =>
+                        <p key={index}>{message}</p>
+                    )}
+                </div>
+            </Background>
 
             <UserList users={users} />
         </div>

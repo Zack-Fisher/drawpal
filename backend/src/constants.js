@@ -1,7 +1,7 @@
 /// use this file as a common header for the api, this is stuff that the frontend can also include.
 
 // general constant-type stuff.
-const PORT = 3002
+export const PORT = 3002
 
 // needs to be easily serializable to json.
 // this is passed around the socket constantly, only as a json object.
@@ -58,6 +58,16 @@ const Data = {
 }
 
 //// END DEFINE TYPES
+
+// drawing defines
+export const PenShape = {
+    CIRCLE: 'circle',
+    SQUARE: 'square',
+    TRIANGLE: 'triangle',
+    STAR: 'star',
+    HEART: 'heart',
+    DIAMOND: 'diamond',
+}
 
 //// DEFINE CONSTRUCTORS
 

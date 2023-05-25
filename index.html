@@ -4,28 +4,51 @@
         <meta charset="utf-8" />
         <title>Webpack App</title>
         <style>
-            :root {
-                --start-color: rgb(26, 26, 44);
-                --mid-color: rgb(24, 43, 24);
-            }
-
             @keyframes colorAnimation {
                 0% { background-color: var(--start-color); } /* Specify the initial background color */
                 50% { background-color: var(--mid-color); } /* Specify the intermediate background color */
                 100% { background-color: var(--start-color); } /* Specify the final background color */
             }
 
-            * {
-                color: rgb(224, 108, 108);
+            .container {
+                max-width: 99%; /* Adjust the maximum width as needed */
+                margin: 0 auto; /* Center the container horizontally */
+                padding: 20px; /* Add some padding around the content */
+                border: 3px solid #000; /* Specify border style, width, and color */
+                border-style: double;
+                border-radius: 10px; /* Add rounded corners */
+
+                animation: colorAnimation 100s ease infinite; /* Apply the animation */
+
+                /* gradient the background color */
+                background: linear-gradient(0deg, var(--start-color), var(--mid-color));
+            }
+
+            :root {
+                --start-color: rgb(26, 26, 44);
+                --mid-color: rgb(24, 43, 24);
+
+                --bg-start-color: rgb(0, 0, 0);
+                --bg-end-color: rgb(30, 30, 20);
             }
 
             body {
-                animation: colorAnimation 100s ease infinite; /* Apply the animation */
+                cursor: url('/assets/cursor.png'), auto;
+                padding: 10px;
+                overflow: hidden;
+
+                background: linear-gradient(0deg, var(--bg-start-color), var(--bg-end-color));
+
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 16px;
+                font-weight: bolder;
             }
+
         </style>
     </head>
     <body>
     </body>
+
     <div id="root"></div>
     
     <script src="/dist/main.js"></script>

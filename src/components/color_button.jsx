@@ -12,10 +12,9 @@ const ColorButton = ({ color, setParentColor }) => {
             <button
                 style={{
                     backgroundColor: color,
-                    width: '20px',
+                    width: '30px',
                     height: '20px',
-                    borderRadius: '50%',
-                    margin: '5px',
+                    margin: '3px',
                 }}
                 // pass the setter function here, so that passing the color makes sense.
                 // everything should be passed DOWN, and happen in the children.

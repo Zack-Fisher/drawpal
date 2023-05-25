@@ -1,6 +1,6 @@
 import React from "react";
 import ColorButton from "./color_button";
-import { useColorContext } from "./state";
+import { usePenContext } from "./state";
 
 // just using css color names here, but hex codes like #ff0000 would work too
 const colors = [
@@ -16,7 +16,7 @@ const colors = [
 
 const ColorSelector = (props) => {
     // get the drawing context once, then pass it down to the children buttons through callback props.
-    const {setColor} = useColorContext();
+    const {setColor} = usePenContext();
 
     return (
         <div style={{
